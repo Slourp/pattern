@@ -14,8 +14,7 @@
         "symfony/runtime": "6.2.*",
         "symfony/yaml": "6.2.*"
     },
-    "require-dev": {
-    },
+    "require-dev": {},
     "config": {
         "allow-plugins": {
             "php-http/discovery": true,
@@ -26,7 +25,8 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "src/",
+            "App\\Patterns\\": "src/Patterns/"
         }
     },
     "autoload-dev": {
