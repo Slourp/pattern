@@ -7,6 +7,7 @@ ARG GROUP_ID
 ARG USER
 ARG DEBUG_MODE=off
 
+RUN apk add unzip p7zip
 # Create a group and user
 RUN addgroup -g ${GROUP_ID} -S ${USER} && adduser -u ${USER_ID} -S ${USER} -G ${USER}
 
