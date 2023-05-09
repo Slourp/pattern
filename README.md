@@ -23,7 +23,7 @@ This project is built using the following Gang of Four design patterns:
 ### Creational Patterns 🧱
 
 - [ ] Abstract Factory 🧰
-- [ ] Builder 🔨
+- [X] Builder 🔨
 - [ ] Factory Method 🏭
 - [ ] Prototype 🐑
 - [ ] Singleton 🕰️
