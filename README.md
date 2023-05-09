@@ -22,35 +22,35 @@ This project is built using the following Gang of Four design patterns:
 
 ### Creational Patterns 🧱
 
-- Abstract Factory 🧰
-- Builder 🔨
-- Factory Method 🏭
-- Prototype 🐑
-- Singleton 🕰️
+- [ ] Abstract Factory 🧰
+- [ ] Builder 🔨
+- [ ] Factory Method 🏭
+- [ ] Prototype 🐑
+- [ ] Singleton 🕰️
 
 ### Structural Patterns 🚪
 
-- Adapter 🌉
-- Bridge 🌁
-- Composite 🌴
-- Decorator 🎨
-- Facade 🏢
-- Flyweight 🪁
-- Proxy 🕵️
+- [ ] Adapter 🌉
+- [ ] Bridge 🌁
+- [ ] Composite 🌴
+- [ ] Decorator 🎨
+- [ ] Facade 🏢
+- [ ] Flyweight 🪁
+- [ ] Proxy 🕵️
 
 ### Behavioral Patterns 🐾
 
-- Chain of Responsibility 🔗
-- Command 📜
-- Interpreter 🗣️
-- Iterator 🔄
-- Mediator 🤝
-- Memento 💾
-- Observer 👀
-- State 🏳️
-- Strategy 🎯
-- Template Method 📝
-- Visitor 👥
+- [ ] Chain of Responsibility 🔗
+- [ ] Command 📜
+- [ ] Interpreter 🗣️
+- [ ] Iterator 🔄
+- [ ] Mediator 🤝
+- [ ] Memento 💾
+- [ ] Observer 👀
+- [ ] State 🏳️
+- [ ] Strategy 🎯
+- [ ] Template Method 📝
+- [ ] Visitor 👥
 
 ## License 📝
 
