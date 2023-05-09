@@ -1,17 +1,69 @@
-# Mon Projet
+# Dockerized Symfony Project with Gang of Four Design Patterns
 
-Ce projet a été créé pour démontrer l'utilisation de la programmation en PHP. Le projet utilise également Composer pour gérer les dépendances.
+👋 Welcome to this Dockerized Symfony project that is focused on the Gang of Four design patterns. In this project, you will find a web application that is built using Symfony and Docker, and follows the best practices of Gang of Four design patterns. 🚀
 
-## Configuration requise
+## Getting Started 🏁
 
-Le projet nécessite PHP version 8.2 ou supérieure, ainsi que Docker et Docker Compose.
+To get started with this project, follow the steps below:
 
-## Installation
-
-1. Clonez le dépôt sur votre machine locale.
-2. Exécutez la commande suivante pour installer les dépendances :
+1. Clone this repository to your local machine. 🖥️
+2. Navigate to the root directory of the project.
+3. Run the following command to start the Docker containers: 💻
 
 ```
-composer install
+USER=$USER USER_ID=$(id -u) GROUP_ID=$(id -g) docker-compose -f docker-compose.dev.yml up -d
 ```
 
+4. Visit `https://pattern.traefik.me` in your web browser to access the application. 🌐
+
+## Design Patterns 💡
+
+This project is built using the following Gang of Four design patterns:
+
+### Creational Patterns 🧱
+
+- Abstract Factory 🧰
+- Builder 🔨
+- Factory Method 🏭
+- Prototype 🐑
+- Singleton 🕰️
+
+### Structural Patterns 🚪
+
+- Adapter 🌉
+- Bridge 🌁
+- Composite 🌴
+- Decorator 🎨
+- Facade 🏢
+- Flyweight 🪁
+- Proxy 🕵️
+
+### Behavioral Patterns 🐾
+
+- Chain of Responsibility 🔗
+- Command 📜
+- Interpreter 🗣️
+- Iterator 🔄
+- Mediator 🤝
+- Memento 💾
+- Observer 👀
+- State 🏳️
+- Strategy 🎯
+- Template Method 📝
+- Visitor 👥
+
+## License 📝
+
+This project is licensed under the MIT License. See the `LICENSE` file for more information.
+
+## Contact the Developer 📧
+
+If you have any questions, issues, or feature requests, feel free to contact the developer of this project:
+
+Name: David .V
+Email: davidvanmak+github@gmail.com
+GitHub: https://github.com/Slourp/
+
+💁‍♂️ I'm always happy to help! 
+
+👉 Need Help? Contact the Developer! 👋
