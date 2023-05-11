@@ -7,6 +7,7 @@ use App\Patterns\Creational\Builder\Exemple1\OnlineOrderBuilder;
 use App\Patterns\Creational\FactoryMethod\Exemple1\ClientFactory;
 use App\Patterns\Creational\FactoryMethod\Exemple1\ProductFactoryInterface;
 use App\Patterns\Creational\OrderDirector;
+use App\Patterns\Creational\Prototype\Exemple1\ClientPrototype;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -47,7 +48,7 @@ class RunCreationalExampleCommand extends Command
                 new OrderDirector(new OnlineOrderBuilder())
             ))->run(),
             'factorymethod' => (new ClientFactory($this->factory))->run(),
-            'prototype' => $io->error('Prototype not implemented yet.'),
+            'prototype' => (new ClientPrototype())->run(),
             'singleton' => $io->error('Singleton not implemented yet.'),
             default => $io->error(sprintf('Unknown pattern "%s".', $pattern)),
         };
