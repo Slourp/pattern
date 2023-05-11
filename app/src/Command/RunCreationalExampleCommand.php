@@ -8,6 +8,7 @@ use App\Patterns\Creational\FactoryMethod\Exemple1\ClientFactory;
 use App\Patterns\Creational\FactoryMethod\Exemple1\ProductFactoryInterface;
 use App\Patterns\Creational\OrderDirector;
 use App\Patterns\Creational\Prototype\Exemple1\ClientPrototype;
+use App\Patterns\Creational\Singleton\Exemple1\ClientSingleton;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -49,7 +50,7 @@ class RunCreationalExampleCommand extends Command
             ))->run(),
             'factorymethod' => (new ClientFactory($this->factory))->run(),
             'prototype' => (new ClientPrototype())->run(),
-            'singleton' => $io->error('Singleton not implemented yet.'),
+            'singleton' => (new ClientSingleton)->run(),
             default => $io->error(sprintf('Unknown pattern "%s".', $pattern)),
         };
 

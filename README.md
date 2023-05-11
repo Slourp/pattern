@@ -26,7 +26,7 @@ This project is built using the following Gang of Four design patterns:
 - [X] Builder 🔨
 - [X] Factory Method 🏭
 - [X] Prototype 🐑
-- [ ] Singleton 🕰️
+- [X] Singleton 🕰️
 
 ### Structural Patterns 🚪
 
