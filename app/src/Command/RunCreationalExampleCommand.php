@@ -4,6 +4,8 @@ namespace App\Command;
 
 use App\Patterns\Creational\Builder\Exemple1\ClientBuilder;
 use App\Patterns\Creational\Builder\Exemple1\OnlineOrderBuilder;
+use App\Patterns\Creational\FactoryMethod\Exemple1\ClientFactory;
+use App\Patterns\Creational\FactoryMethod\Exemple1\ProductFactoryInterface;
 use App\Patterns\Creational\OrderDirector;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
@@ -19,6 +21,11 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 )]
 class RunCreationalExampleCommand extends Command
 {
+
+    public function __construct(private ProductFactoryInterface $factory)
+    {
+        parent::__construct();
+    }
     protected function configure(): void
     {
         $this
@@ -39,7 +46,7 @@ class RunCreationalExampleCommand extends Command
                 new OnlineOrderBuilder(),
                 new OrderDirector(new OnlineOrderBuilder())
             ))->run(),
-            'factorymethod' => $io->error('Factory Method not implemented yet.'),
+            'factorymethod' => (new ClientFactory($this->factory))->run(),
             'prototype' => $io->error('Prototype not implemented yet.'),
             'singleton' => $io->error('Singleton not implemented yet.'),
             default => $io->error(sprintf('Unknown pattern "%s".', $pattern)),
