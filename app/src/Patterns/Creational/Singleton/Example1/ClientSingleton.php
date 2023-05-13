@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Patterns\Creational\Singleton\Exemple1;
+namespace App\Patterns\Creational\Singleton\Example1;
 
 class ClientSingleton
 {

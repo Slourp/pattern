@@ -1,6 +1,6 @@
 <?
 
-namespace App\Patterns\Creational\Prototype\Exemple1;
+namespace App\Patterns\Creational\Prototype\Example1;
 
 
 class MathBookPrototype extends BookPrototype

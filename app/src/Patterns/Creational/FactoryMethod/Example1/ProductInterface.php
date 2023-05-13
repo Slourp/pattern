@@ -1,6 +1,6 @@
 <?
 
-namespace App\Patterns\Creational\FactoryMethod\Exemple1;
+namespace App\Patterns\Creational\FactoryMethod\Example1;
 
 
 interface ProductInterface

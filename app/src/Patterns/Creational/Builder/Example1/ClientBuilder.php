@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Patterns\Creational\Builder\Exemple1;
+namespace App\Patterns\Creational\Builder\Example1;
 
 use App\Patterns\Creational\OrderDirector;
 
