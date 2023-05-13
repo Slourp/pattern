@@ -5,6 +5,7 @@ namespace App\Patterns\Behavioral\ChainOfResponsibility\Example1;
 class StockCheckHandler implements HandlerInterface
 {
     private $nextHandler;
+    use ForwardRequestTrait;
 
     public function setNext(HandlerInterface $handler): HandlerInterface
     {
@@ -17,9 +18,6 @@ class StockCheckHandler implements HandlerInterface
         if (!$request->inStock) return "Product is not in stock.";
 
 
-        if ($this->nextHandler !== null) return $this->nextHandler->handle($request);
-
-
-        return null;
+        return $this->forwardRequest($request);
     }
 }
