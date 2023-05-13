@@ -2,6 +2,10 @@
 
 namespace App\Command;
 
+use App\Patterns\Behavioral\Command\Exemple1\Cart;
+use App\Patterns\Behavioral\Command\Exemple1\ClientCommand;
+// Include other necessary classes for behavioral patterns
+
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
@@ -11,33 +15,101 @@ use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
 #[AsCommand(
-    name: 'RunBehavioralExample',
-    description: 'Add a short description for your command',
+    name: 'behavioral:run',
+
+    description: 'Runs an example of a behavioral design pattern.',
 )]
 class RunBehavioralExampleCommand extends Command
 {
     protected function configure(): void
     {
         $this
-            ->addArgument('arg1', InputArgument::OPTIONAL, 'Argument description')
+            ->addArgument('pattern', InputArgument::OPTIONAL, 'Argument description')
             ->addOption('option1', null, InputOption::VALUE_NONE, 'Option description');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $io = new SymfonyStyle($input, $output);
-        $arg1 = $input->getArgument('arg1');
 
-        if ($arg1) {
-            $io->note(sprintf('You passed an argument: %s', $arg1));
-        }
+        $pattern = $input->getArgument('pattern');
 
-        if ($input->getOption('option1')) {
-            // ...
-        }
+        match ($pattern) {
+            'chainofresponsibility' => $this->runChainOfResponsibilityPatternExample($io),
+            'command' => $this->runCommandPatternExample($io),
+            'interpreter' => $this->runInterpreterPatternExample($io),
+            'iterator' => $this->runIteratorPatternExample($io),
+            'mediator' => $this->runMediatorPatternExample($io),
+            'memento' => $this->runMementoPatternExample($io),
+            'observer' => $this->runObserverPatternExample($io),
+            'state' => $this->runStatePatternExample($io),
+            'strategy' => $this->runStrategyPatternExample($io),
+            'template' => $this->runTemplatePatternExample($io),
+            'visitor' => $this->runVisitorPatternExample($io),
+            default => $io->error(sprintf('Pattern "%s" is not implemented yet.', $pattern)),
+        };
 
-        $io->success('You have a new command! Now make it your own! Pass --help to see your options.');
+        // $io->success('Behavioral design pattern example has been run successfully.');
 
         return Command::SUCCESS;
+    }
+
+    private function runChainOfResponsibilityPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Chain of Responsibility pattern is not implemented yet.');
+    }
+
+    private function runCommandPatternExample(): void
+    {
+        // Create a cart instance
+
+        // Create and run the client command
+        $clientCommand = new ClientCommand();
+        $clientCommand->run();
+    }
+
+    private function runInterpreterPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Interpreter pattern is not implemented yet.');
+    }
+
+    private function runIteratorPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Iterator pattern is not implemented yet.');
+    }
+
+    private function runMediatorPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Mediator pattern is not implemented yet.');
+    }
+
+    private function runMementoPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Memento pattern is not implemented yet.');
+    }
+
+    private function runObserverPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Observer pattern is not implemented yet.');
+    }
+
+    private function runStatePatternExample(SymfonyStyle $io): void
+    {
+        $io->error('State pattern is not implemented yet.');
+    }
+
+    private function runStrategyPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Strategy pattern is not implemented yet.');
+    }
+
+    private function runTemplatePatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Template pattern is not implemented yet.');
+    }
+
+    private function runVisitorPatternExample(SymfonyStyle $io): void
+    {
+        $io->error('Visitor pattern is not implemented yet.');
     }
 }
