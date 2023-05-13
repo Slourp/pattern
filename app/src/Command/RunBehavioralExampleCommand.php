@@ -4,6 +4,7 @@ namespace App\Command;
 
 use App\Patterns\Behavioral\ChainOfResponsibility\Example1\ClientCoR;
 use App\Patterns\Behavioral\Command\Example1\ClientCommand;
+use App\Patterns\Behavioral\Interpreter\Example1\ClientInterpreter;
 // Include other necessary classes for behavioral patterns
 
 use Symfony\Component\Console\Attribute\AsCommand;
@@ -54,7 +55,7 @@ class RunBehavioralExampleCommand extends Command
         return Command::SUCCESS;
     }
 
-    private function runChainOfResponsibilityPatternExample(SymfonyStyle $io): void
+    private function runChainOfResponsibilityPatternExample(): void
     {
         $clientCommand = new ClientCoR();
         $clientCommand->run();
@@ -69,9 +70,10 @@ class RunBehavioralExampleCommand extends Command
         $clientCommand->run();
     }
 
-    private function runInterpreterPatternExample(SymfonyStyle $io): void
+    private function runInterpreterPatternExample(): void
     {
-        $io->error('Interpreter pattern is not implemented yet.');
+        $clientInterpreter = new ClientInterpreter();
+        $clientInterpreter->run();
     }
 
     private function runIteratorPatternExample(SymfonyStyle $io): void
