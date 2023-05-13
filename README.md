@@ -40,7 +40,7 @@ This project is built using the following Gang of Four design patterns:
 
 ### Behavioral Patterns 🐾
 
-- [ ] Chain of Responsibility 🔗
+- [X] Chain of Responsibility 🔗
 - [X] Command 📜
 - [ ] Interpreter 🗣️
 - [ ] Iterator 🔄
