@@ -2,7 +2,7 @@
 
 namespace App\Command;
 
-use App\Patterns\Behavioral\Command\Example1\Cart;
+use App\Patterns\Behavioral\ChainOfResponsibility\Example1\ClientCoR;
 use App\Patterns\Behavioral\Command\Example1\ClientCommand;
 // Include other necessary classes for behavioral patterns
 
@@ -56,7 +56,8 @@ class RunBehavioralExampleCommand extends Command
 
     private function runChainOfResponsibilityPatternExample(SymfonyStyle $io): void
     {
-        $io->error('Chain of Responsibility pattern is not implemented yet.');
+        $clientCommand = new ClientCoR();
+        $clientCommand->run();
     }
 
     private function runCommandPatternExample(): void
