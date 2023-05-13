@@ -2,13 +2,13 @@
 
 namespace App\Command;
 
-use App\Patterns\Creational\Builder\Exemple1\ClientBuilder;
-use App\Patterns\Creational\Builder\Exemple1\OnlineOrderBuilder;
-use App\Patterns\Creational\FactoryMethod\Exemple1\ClientFactory;
-use App\Patterns\Creational\FactoryMethod\Exemple1\ProductFactoryInterface;
+use App\Patterns\Creational\Builder\Example1\ClientBuilder;
+use App\Patterns\Creational\Builder\Example1\OnlineOrderBuilder;
+use App\Patterns\Creational\FactoryMethod\Example1\ClientFactory;
+use App\Patterns\Creational\FactoryMethod\Example1\ProductFactoryInterface;
 use App\Patterns\Creational\OrderDirector;
-use App\Patterns\Creational\Prototype\Exemple1\ClientPrototype;
-use App\Patterns\Creational\Singleton\Exemple1\ClientSingleton;
+use App\Patterns\Creational\Prototype\Example1\ClientPrototype;
+use App\Patterns\Creational\Singleton\Example1\ClientSingleton;
 use Symfony\Component\Console\Attribute\AsCommand;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;

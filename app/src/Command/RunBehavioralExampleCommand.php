@@ -2,8 +2,8 @@
 
 namespace App\Command;
 
-use App\Patterns\Behavioral\Command\Exemple1\Cart;
-use App\Patterns\Behavioral\Command\Exemple1\ClientCommand;
+use App\Patterns\Behavioral\Command\Example1\Cart;
+use App\Patterns\Behavioral\Command\Example1\ClientCommand;
 // Include other necessary classes for behavioral patterns
 
 use Symfony\Component\Console\Attribute\AsCommand;
