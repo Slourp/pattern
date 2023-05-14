@@ -21,36 +21,36 @@ USER=$USER USER_ID=$(id -u) GROUP_ID=$(id -g) docker-compose -f docker-compose.d
 This project is built using the following Gang of Four design patterns:
 
 ### Creational Patterns 🧱
-    
-:white_check_mark: Abstract Factory 🧰
-:white_check_mark: Builder 🔨
-:white_check_mark: Factory Method 🏭
-:white_check_mark: Prototype 🐑
-:white_check_mark: Singleton 🕰️
+
+- [ ] Abstract Factory 🧰
+- [X] Builder 🔨
+- [X] Factory Method 🏭
+- [X] Prototype 🐑
+- [X] Singleton 🕰️
 
 ### Structural Patterns 🚪
 
-:x: Adapter 🌉
-:x: Bridge 🌁
-:x: Composite 🌴
-:x: Decorator 🎨
-:x: Facade 🏢
-:x: Flyweight 🪁
-:x: Proxy 🕵️
+- [ ] Adapter 🌉
+- [ ] Bridge 🌁
+- [ ] Composite 🌴
+- [ ] Decorator 🎨
+- [ ] Facade 🏢
+- [ ] Flyweight 🪁
+- [ ] Proxy 🕵️
 
 ### Behavioral Patterns 🐾
 
-:white_check_mark: Chain of Responsibility 🔗
-:white_check_mark: Command 📜
-:white_check_mark: Interpreter 🗣️
-:white_check_mark: Iterator 🔄
-:white_check_mark: Mediator 🤝
-:white_check_mark: Memento 💾
-:x: Observer 👀
-:x: State 🏳️
-:x: Strategy 🎯
-:x: Template Method 📝
-:x: Visitor 👥
+- [X] Chain of Responsibility 🔗
+- [X] Command 📜
+- [X] Interpreter 🗣️
+- [X] Iterator 🔄
+- [ ] Mediator 🤝
+- [X] Memento 💾
+- [ ] Observer 👀
+- [ ] State 🏳️
+- [ ] Strategy 🎯
+- [ ] Template Method 📝
+- [ ] Visitor 👥
 
 ## License 📝
 
