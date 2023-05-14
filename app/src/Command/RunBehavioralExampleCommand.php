@@ -4,7 +4,7 @@ namespace App\Command;
 
 use App\Patterns\Behavioral\ChainOfResponsibility\Example1\ClientCoR;
 use App\Patterns\Behavioral\Command\Example1\ClientCommand;
-use App\Patterns\Behavioral\Interpreter\Example1\ClientInterpreter;
+use App\Patterns\Behavioral\Interpreter\Exemple1\ClientInterpreter;
 // Include other necessary classes for behavioral patterns
 
 use Symfony\Component\Console\Attribute\AsCommand;
