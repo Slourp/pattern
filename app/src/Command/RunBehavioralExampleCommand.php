@@ -4,6 +4,7 @@ namespace App\Command;
 
 use App\Patterns\Behavioral\ChainOfResponsibility\Example1\ClientCoR;
 use App\Patterns\Behavioral\Command\Example1\ClientCommand;
+use App\Patterns\Behavioral\Interpreter\Example2\ClientInterpreter as Example2ClientInterpreter;
 use App\Patterns\Behavioral\Interpreter\Exemple1\ClientInterpreter;
 // Include other necessary classes for behavioral patterns
 
@@ -72,7 +73,7 @@ class RunBehavioralExampleCommand extends Command
 
     private function runInterpreterPatternExample(): void
     {
-        $clientInterpreter = new ClientInterpreter();
+        $clientInterpreter = new Example2ClientInterpreter();
         $clientInterpreter->run();
     }
 

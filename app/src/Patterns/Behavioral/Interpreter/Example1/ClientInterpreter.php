@@ -35,7 +35,11 @@ class ClientInterpreter
 
         // Create an expression that will be true if all contained expressions are true.
         // In this case, the expression should return true because all varieties are in the list.
-        $allExpressionTrue = new AllVarietiesMatchExpression($merlotExpression, $chardonnayExpression, $cabernetExpression);
+        $allExpressionTrue = new AllVarietiesMatchExpression(
+            $merlotExpression,
+            $chardonnayExpression,
+            $cabernetExpression
+        );
 
         // Create another expression that will be true if all contained expressions are true.
         // However, in this case, the expression should return false because Syrah is not in the list.
