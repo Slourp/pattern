@@ -43,7 +43,7 @@ This project is built using the following Gang of Four design patterns:
 - [X] Chain of Responsibility 🔗
 - [X] Command 📜
 - [X] Interpreter 🗣️
-- [ ] Iterator 🔄
+- [X] Iterator 🔄
 - [ ] Mediator 🤝
 - [ ] Memento 💾
 - [ ] Observer 👀
