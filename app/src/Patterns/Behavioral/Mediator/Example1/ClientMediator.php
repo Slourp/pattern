@@ -1,37 +1,50 @@
-<?
+<?php
 
 namespace App\Patterns\Behavioral\Mediator\Example1;
 
 class ClientMediator
 {
 
-    public function run()
+
+    public function __construct(
+        private ?ECommercePlatformInterface $platform = null
+    ) {
+        if (is_null($this->platform))  $this->platform = new ECommercePlatform();
+    }
+
+    public function run(): void
     {
+        // Créer quelques instances de Wine
+        $wine1 = new Wine('Cabernet Sauvignon', 20.00);
+        $wine2 = new Wine('Pinot Noir', 25.00);
 
+        // Créer des stocks pour ces vins
+        $stock1 = new Stock($wine1, 50);
+        $stock2 = new Stock($wine2, 50);
 
-        // Création du médiateur
-        $boutique = new BoutiqueEnLigne();
+        // Créer un client
+        $customer = new Customer('John Doe', 'john.doe@example.com');
 
-        // Création des collègues
-        $vigneron = new Vigneron();
-        $client = new Client();
+        // Créer un panier
+        $cart = new Cart();
 
-        // Injection du médiateur dans les collègues
-        $boutique->setVigneron($vigneron);
-        $boutique->setClient($client);
+        // Ajouter des vins au panier
+        $this->platform->addToCart($cart, $stock1, 2);
+        $this->platform->addToCart($cart, $stock2, 3);
 
-        // Le vigneron produit un vin
-        $vigneron->produireVin("Pinot Noir");
+        // Créer un discount
+        $discount = new Discount(0.1); // 10% de réduction
 
-        // Le client achète le vin
-        $client->acheterVin();
+        // Créer une commande
+        $order = $this->platform->createOrder($customer, $cart, $discount);
 
-        // Récupération de la facture
-        // $facture = $boutique->getFacture();
+        // Créer une facture
+        $invoice = $this->platform->createInvoice($order);
 
-        // Ici, vous pouvez utiliser la facture comme vous le souhaitez
-        // Par exemple, afficher les détails de la facture, l'envoyer au client, etc.
+        // Notifier le client
+        $this->platform->notifyCustomer($invoice);
 
-
+        // Afficher le montant total de la facture
+        echo "Total amount: {$invoice->getAmountDue()}\n";
     }
 }

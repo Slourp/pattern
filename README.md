@@ -44,7 +44,7 @@ This project is built using the following Gang of Four design patterns:
 - [X] Command 📜
 - [X] Interpreter 🗣️
 - [X] Iterator 🔄
-- [ ] Mediator 🤝
+- [X] Mediator 🤝
 - [X] Memento 💾
 - [ ] Observer 👀
 - [ ] State 🏳️
