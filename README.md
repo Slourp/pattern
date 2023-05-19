@@ -50,7 +50,7 @@ This project is built using the following Gang of Four design patterns:
 - [ ] State 🏳️
 - [ ] Strategy 🎯
 - [ ] Template Method 📝
-- [ ] Visitor 👥
+- [X] Visitor 👥
 
 ## License 📝
 
